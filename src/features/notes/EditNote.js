@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectNoteById, useGetNotesQuery } from "./notesApiSlice";
-import { selectAllUsers, useGetUsersQuery } from "../users/usersApiSlice";
+import { useGetNotesQuery } from "./notesApiSlice";
+import { useGetUsersQuery } from "../users/usersApiSlice";
 import EditNoteForm from "./EditNoteForm";
 import useAuth from "../../hooks/useAuth";
 import PulseLoader from "react-spinners/PulseLoader";

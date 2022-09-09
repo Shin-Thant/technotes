@@ -16,7 +16,6 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 			}),
 
 			transformResponse: (responseData) => {
-				console.log({ responseData });
 				const loadedUsers = responseData?.map((user) => {
 					user.id = user._id;
 					return user;
