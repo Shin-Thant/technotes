@@ -13,8 +13,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 		getNotes: builder.query({
 			query: () => ({
 				url: "/notes",
-				validateStatus: (response) => {
-					return response.status === 200 && !response.isError;
+				validateStatus: (response, result) => {
+					return response.status === 200 && !result.isError;
 				},
 			}),
 
